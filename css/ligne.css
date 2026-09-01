@@ -17,3 +17,8 @@ body {
     border-bottom: 3px solid #2563eb;
     padding-bottom: 12px;
 }
+
+.menu{
+	background: lightgreen;
+	color: white;
+}
