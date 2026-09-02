@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paramètres</title>
+    <p>Bienvenue sur ma page de paramètres.</p>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #f5f5f5;
+            color: #333;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 50px auto;
+            padding: 20px;
+        }
+
+        h1 {
+            margin-bottom: 25px;
+            font-size: 28px;
+        }
+
+        .settings {
+            background: white;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        .section {
+            padding: 25px;
+            border-bottom: 1px solid #eee;
+        }
+
+        .section:last-child {
+            border-bottom: none;
+        }
+
+        .section h2 {
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+
+        .form-group {
+            margin-bottom: 18px;
+        }
+
+        .form-group:last-child {
+            margin-bottom: 0;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 7px;
+            font-weight: bold;
+            font-size: 14px;
+        }
+
+        input,
+        select {
+            width: 100%;
+            padding: 11px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 14px;
+            background: white;
+        }
+
+        input:focus,
+        select:focus {
+            outline: none;
+            border-color: #555;
+        }
+
+        .checkbox {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .checkbox input {
+            width: auto;
+        }
+
+        .checkbox label {
+            margin: 0;
+            font-weight: normal;
+        }
+
+        .buttons {
+            display: flex;
+            justify-content: flex-end;
+            gap: 10px;
+            margin-top: 25px;
+        }
+
+        button {
+            padding: 11px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 14px;
+        }
+
+        .cancel {
+            background: #e5e5e5;
+            color: #333;
+        }
+
+        .save {
+            background: #333;
+            color: white;
+        }
+
+        .save:hover {
+            background: #222;
+        }
+
+        .cancel:hover {
+            background: #d5d5d5;
+        }
+
+        .danger {
+            color: #c62828;
+        }
+
+        .delete {
+            background: #c62828;
+            color: white;
+        }
+
+        .delete:hover {
+            background: #a91f1f;
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                margin: 20px auto;
+            }
+
+            .section {
+                padding: 20px;
+            }
+
+            .buttons {
+                flex-direction: column;
+            }
+
+            button {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>Paramètres</h1>
+
+        <div class="settings">
+
+            <!-- Profil -->
+            <div class="section">
+                <h2>Profil</h2>
+
+                <div class="form-group">
+                    <label for="name">Nom</label>
+                    <input type="text" id="name" placeholder="Votre nom">
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Adresse e-mail</label>
+                    <input type="email" id="email" placeholder="exemple@email.com">
+                </div>
+            </div>
+
+            <!-- Préférences -->
+            <div class="section">
+                <h2>Préférences</h2>
+
+                <div class="form-group">
+                    <label for="language">Langue</label>
+                    <select id="language">
+                        <option value="fr">Français</option>
+                        <option value="en">English</option>
+                        <option value="es">Español</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="theme">Thème</label>
+                    <select id="theme">
+                        <option value="light">Clair</option>
+                        <option value="dark">Sombre</option>
+                        <option value="system">Système</option>
+                    </select>
+                </div>
+
+                <div class="checkbox">
+                    <input type="checkbox" id="notifications" checked>
+                    <label for="notifications">
+                        Recevoir les notifications
+                    </label>
+                </div>
+            </div>
+
+            <!-- Sécurité -->
+            <div class="section">
+                <h2>Sécurité</h2>
+
+                <div class="form-group">
+                    <label for="password">Nouveau mot de passe</label>
+                    <input type="password" id="password" placeholder="••••••••">
+                </div>
+
+                <div class="form-group">
+                    <label for="confirm-password">
+                        Confirmer le mot de passe
+                    </label>
+                    <input type="password" id="confirm-password" placeholder="••••••••">
+                </div>
+            </div>
+
+            <!-- Compte -->
+            <div class="section">
+                <h2 class="danger">Compte</h2>
+
+                <p style="margin-bottom: 15px;">
+                    La suppression du compte est définitive.
+                </p>
+
+                <button class="delete">
+                    Supprimer mon compte
+                </button>
+            </div>
+
+        </div>
+
+        <!-- Boutons -->
+        <div class="buttons">
+            <button class="cancel">Annuler</button>
+            <button class="save">Enregistrer</button>
+        </div>
+
+    </div>
+
+</body>
+</html>
